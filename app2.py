@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 import sqlite3
 import hashlib
 
-app = Flask(__name__, template_folder = 'C:/Users/79192/Desktop/app2/templates/')
+app = Flask(__name__, template_folder = 'templates/')
 app.secret_key = 'your_secret_key'
 
 # Создаем базу данных SQLite и таблицы для пользователей и проектов
