@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Планирование тестирования</title>
+  <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+
+  <body>
+      <header>
+        <a href="/register"><img src="/static/img/create_akk.png" alt="Создать аккаунт" title="Создать аккаунт" style="height: 50px; height: 50px;float: right; padding-right: 20px"></a>
+        <h1>Система планирования тестирования</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="/main">Главная</a></li>
+          <li><a href="/projects">Мои проекты</a></li>
+          <li><a href="/case">Чек-лист</a></li>
+          <li><a href="/environments">Тестовое окружение</a></li>
+          <li><a href="/for_qa">Регламент работы</a></li>
+        </ul>
+      </nav>
+        <h1>Добавить тест кейс</h1>
+        <form action="/add_case" method="POST" class="items">
+          <label for="test_case_name">Проект:</label><br><br>
+            <input class="textarea" type="text" name="project_name"><br><br>
+            <label for="test_case_name">Название функциональности:</label><br><br>
+            <input class="textarea" type="text" id="test_case_name" name="test_case_name" required ><br><br>
+            <label for="test_case_description">Как проверять:</label><br><br>
+            <textarea class="textarea" id="test_case_description" name="test_case_description" required></textarea><br><br>
+            <input  type="submit" value="Сохранить" class="save_button">
+        </form>
+        <footer>
+          <p>© 2024 Система планирования тестирования. Все права защищены.</p>
+        </footer>
+</body>
+</html>

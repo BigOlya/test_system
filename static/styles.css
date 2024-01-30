@@ -1,0 +1,140 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+h1, h2 {
+  color: #333;
+  margin-left: 30px;
+}
+
+/* Стили для шапки */
+header {
+  background-color: #ebf6fc;
+  padding: 20px;
+}
+
+/* Стили для навигации */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5% 0;
+  background-color: #0e0855;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 3%;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для основного содержимого */
+main {
+  padding: 20px;
+}
+.items{
+  padding-left: 50px;
+  padding-right: 300px;
+  padding-top: 30px;
+  position: relative;
+  min-height: 100%;
+  background-color: white;
+
+}
+.add_button{
+  position: fixed;
+  left: 87%;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #448fd6;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для подвала */
+footer {
+  background-color: #f2f2f2;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #777;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+}
+name_of_item{
+  font-weight: bold;
+}
+.edit_buttons{
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-right: 60px;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #65a2db;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  width:150px;
+}
+#delete_button{
+  position: relative;
+  top: -49px;
+  left: 170px;}
+
+  .textarea{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  width: 700px;
+  }
+
+  .save_button{
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #448fd6;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .textarea_edit{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  width: 1000px;
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Планирование тестирования</title>
+  <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+
+  <body>
+      <header>
+        <a href="/logout"><img src="/static/img/out.png" alt="Выход" title="Выход" style="height: 50px; height: 50px;float: right; padding-right: 20px"></a>
+        <a href="/register"><img src="/static/img/create_akk.png" alt="Создать аккаунт" title="Создать аккаунт" style="height: 50px; height: 50px;float: right; padding-right: 20px"></a>
+        <h1>Система планирования тестирования</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="/main">Главная</a></li>
+          <li><a href="/projects">Мои проекты</a></li>
+          <li><a href="/case">Чек-лист</a></li>
+          <li><a href="/environments">Тестовое окружение</a></li>
+          <li><a href="/for_qa">Регламент работы</a></li>
+        </ul>
+      </nav>
+    <h2>Список проектов</h2>
+    <ul class="items">
+      <a href="/add_project" class="add_button">Добавить проект</a> 
+        {% for project in projects %}
+            <li><name_of_item>{{ project[1] }}</name_of_item> - {{ project[2] }}</li><br><br><br>
+            <form action="/delete_project/{{ project[0] }}" method="delete">
+              <button type="submit" class="edit_buttons" id="delete_button">Удалить</button>
+          </form>
+        {% endfor %}
+    </ul>
+  
+    <footer>
+      <p>© 2024 Система планирования тестирования. Все права защищены.</p>
+    </footer>
+</body>
+</html>

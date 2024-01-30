@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планирование тестирования</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+  
+    <body>
+        <header>
+          <a href="/register"><img src="/static/img/create_akk.png" alt="Создать аккаунт" title="Создать аккаунт" style="height: 50px; height: 50px;float: right; padding-right: 20px"></a>
+          <h1>Система планирования тестирования</h1>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="/main">Главная</a></li>
+            <li><a href="/projects">Мои проекты</a></li>
+            <li><a href="/case">Чек-лист</a></li>
+            <li><a href="/environments">Тестовое окружение</a></li>
+            <li><a href="/for_qa">Регламент работы</a></li>
+          </ul>
+        </nav>
+<h2>Список основных проверок каждого проекта</h2>
+  <ul class="items">
+    <a href="/add_case" class="add_button">Добавить</a> 
+        {% for case in case %}
+            <li><name_of_item>Название проекта:</name_of_item> {{ case[2] }}</name_of_item><br><br>
+              <name_of_item>Функциональность:</name_of_item> {{ case[3] }}<br><name_of_item>Как проверять:</name_of_item> {{ case[4] }}</li>
+         
+        <form action="/edit_case/{{ case[0] }}" method="get">
+          <button type="submit" class="edit_buttons" id="edit_button">Редактировать</button>
+      </form>
+      <form action="/delete_case/{{ case[0] }}" method="delete">
+          <button type="submit" class="edit_buttons" id="delete_button">Удалить</button>
+      </form>
+      {% endfor %}
+    </ul>
+    <footer>
+      <p>© 2024 Система планирования тестирования. Все права защищены.</p>
+    </footer>
+</body>
+</html>

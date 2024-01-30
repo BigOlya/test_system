@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Планирование тестирования</title>
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+
+  <body>
+      <header>
+        <a href="/logout"><img src="/static/img/out.png" alt="Выход" title="Выход" style="height: 50px; height: 50px;float: right"></a>
+        <a href="/register"><img src="/static/img/create_akk.png" alt="Создать аккаунт" title="Создать аккаунт" style="height: 50px; height: 50px;float: right; padding-right: 20px"></a>
+
+        <h1>Система планирования тестирования</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="/main">Главная</a></li>
+          <li><a href="/projects">Мои проекты</a></li>
+          <li><a href="/case">Чек-лист</a></li>
+          <li><a href="/environments">Тестовое окружение</a></li>
+          <li><a href="/for_qa">Регламент работы</a></li>
+        </ul>
+      </nav>
+    <h1>Добавление проекта</h1>
+    <form action="/add_project" method="POST" class="items">
+        <label for="name" >Название проекта:</label> <br><br>
+        <input type="text" id="name" name="name"  class="textarea"><br><br>
+        <label for="description" >Описание проекта:</label> <br><br>
+        <textarea id="description" name="description" class="textarea" required></textarea><br><br>
+        <input type="submit" value="Сохранить" class="save_button">
+    </form>
+    <footer>
+      <p>© 2024 Система планирования тестирования. Все права защищены.</p>
+    </footer>
+</body>
+</html>

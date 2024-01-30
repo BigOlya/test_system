@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планирование тестирования</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+  
+    <body>
+        <header>
+          <a href="/register"><img src="/static/img/create_akk.png" alt="Создать аккаунт" title="Создать аккаунт" style="height: 50px; height: 50px;float: right; padding-right: 20px"></a>
+          <h1>Система планирования тестирования</h1>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="/main">Главная</a></li>
+            <li><a href="/projects">Мои проекты</a></li>
+            <li><a href="/case">Чек-лист</a></li>
+            <li><a href="/environments">Тестовое окружение</a></li>
+            <li><a href="/for_qa">Регламент работы</a></li>
+          </ul>
+        </nav>
+    
+    <h1>Список сред для тестирования проектов</h1>
+    <ul class="items">
+        <a href="/add_environment" class="add_button">Создать элемент</a>
+        {% for item in items %}
+        <li>{{ item[1] }}</li>
+        <form action="/edit_environment/{{ item[0] }}" method="get">
+            <button type="submit" class="edit_buttons" id="edit_button">Редактировать</button>
+        </form>
+        <form action="/delete/{{ item[0] }}" method="delete">
+            <button type="submit" class="edit_buttons" id="delete_button">Удалить</button>
+        </form>
+        {% endfor %}
+    </ul>
+    <footer>
+        <p>© 2024 Система планирования тестирования. Все права защищены.</p>
+      </footer>
+</body>
+</html>
