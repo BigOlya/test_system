@@ -140,7 +140,7 @@ def add_case():
             name = request.form['test_case_name']
             description = request.form['test_case_description']
             # Добавляем новый проект в базу данных, связываем его с текущим пользователем
-            cursor.execute("INSERT INTO check_list (name, description, project_name) VALUES (?, ?, ?)", (name, description, project))
+            cursor.execute("INSERT INTO list2 (name, description, project_name) VALUES (?, ?, ?)", (name, description, project))
             conn.commit()
             return redirect('/case')
         return render_template('add_case.html')
